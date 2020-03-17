@@ -46,10 +46,11 @@ setup(
     install_requires=get_install_requires(),
     tests_require=get_extra_requires()['test'],
     extras_require=get_extra_requires(),
+    entry_points={
+        'console_scripts': ['guruguru = guruguru.cli:main']
+    },
     classifiers=[
         'Environment :: CLI Environment',
-        'Framework :: scikit-learn',
-        'Framework :: scikit-learn :: X.Y',  # replace "X.Y" as appropriate
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
