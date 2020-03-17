@@ -1,0 +1,9 @@
+version: "2.3"
+services:
+  guruguru:
+    build: .
+    image: guruguru-cli
+    container_name: guruguru-cli
+    tty: true
+    volumes:
+      - ./:/workspace
