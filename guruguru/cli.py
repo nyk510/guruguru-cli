@@ -1,8 +1,9 @@
 """
 Guruguru Cli Entrypoint.
 """
-from . import authentication
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
+
+from . import authentication
 
 
 def main():
@@ -14,7 +15,6 @@ def main():
     func = args.func
 
     kwrgs = dict(vars(args))
-    print(kwrgs)
     del kwrgs['func']
     del kwrgs['command']
 

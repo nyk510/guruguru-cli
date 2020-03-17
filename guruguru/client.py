@@ -1,5 +1,8 @@
-import requests
 from urllib.parse import urljoin
+
+import requests
+
+from . import constance
 
 
 class BaseUrlSession(requests.Session):
@@ -12,4 +15,4 @@ class BaseUrlSession(requests.Session):
         return super(BaseUrlSession, self).request(method, url, **kwargs)
 
 
-guruguru_session = BaseUrlSession(base_url='https://api.guruguru.ml/')
+guruguru_session = BaseUrlSession(base_url=constance.BASE_URL)
