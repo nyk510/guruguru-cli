@@ -19,14 +19,16 @@ def get_version():
 
 def get_install_requires():
     install_requires = [
-        'requests'
+        'requests',
+        'tabulate',
+        'pandas'
     ]
     return install_requires
 
 
 def get_extra_requires():
     extras = {
-        'test': ['pytest', 'pytest-cov'],
+        'test': ['pytest', 'pytest-cov', 'responses', 'freezegun'],
         'document': ['sphinx', 'sphinx_rtd_theme']
     }
     return extras

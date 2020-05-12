@@ -7,3 +7,5 @@ services:
     tty: true
     volumes:
       - ./:/workspace
+    env_file:
+      - .env
