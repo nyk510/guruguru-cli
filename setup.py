@@ -43,6 +43,7 @@ setup(
     license='BSD License',
     description='guruguru cli toolkit',
     long_description=README,
+    long_description_content_type='text/markdown',
     url='https://atma.co.jp/',
     author_email='yamaguchi@atma.co.jp',
     install_requires=get_install_requires(),
