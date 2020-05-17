@@ -14,7 +14,7 @@ guruguru cli is a command line tool to use guruguru https://www.guruguru.ml/ con
 Installation is easy using `pip` and will install all required libraries.
 
 ```bash
-pip install guruguru-cli
+pip install guruguru
 ```
 
 After install, you can use `guruguru` command from your terminal.
