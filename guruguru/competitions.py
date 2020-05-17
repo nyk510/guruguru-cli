@@ -44,7 +44,7 @@ def show_lb(competition: Union[str, int],
 
     response = guruguru_session.get(f'/competitions/{competition}/{name}/')
     if response.status_code != 200:
-        raise ValueError(f'LB is not found. ')
+        raise ValueError(f'competition {competition} is not found. ')
 
     teams = response.json().get('results', [])
     lb_df = pd.DataFrame(teams)
@@ -52,7 +52,12 @@ def show_lb(competition: Union[str, int],
     vis_df = lb_df.copy()
     if n_top is not None and len(vis_df) > n_top:
         vis_df = vis_df.head(n_top)
-    use_columns = ['name', 'bestPublicScore', 'lastSubmittedAt', 'totalSubmissions', ]
+
+    if private:
+        use_columns = ['name', 'privateRank', 'bestPrivateScore', 'bestPublicScore', 'lastSubmittedAt',
+                       'totalSubmissions']
+    else:
+        use_columns = ['name', 'bestPublicScore', 'lastSubmittedAt', 'totalSubmissions', ]
 
     vis_df = vis_df[use_columns]
 
