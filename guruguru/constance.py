@@ -5,7 +5,7 @@ home = os.path.expanduser('~')
 config_dir = os.path.join(home, '.guruguru')
 os.makedirs(config_dir, exist_ok=True)
 
-BASE_URL = os.getenv('GURUGURU_BASE_URL', 'https://api.guruguru.ml/')
+BASE_URL = os.getenv('GURUGURU_BASE_URL', 'https://api.guruguru.science/')
 
 
 class Config:
